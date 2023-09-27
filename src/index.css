@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+
+:root {
+  --primary-gray: #f7f7f7;
+  --primaryColor: #F45D48;
+  --secondaryColor: #0A8080;
+  --primaryLightColor: #F8F5F2;
+  --primaryLightColorTwo: #FEEFE8;
+  --primaryLightColorThree: #FFF2DF;
+  --textColor: #363636;
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  background-color: var(--primary-gray);
+
+  font-family: 'Inter', sans-serif;
+}
+
+label {
+  font-size: .75rem;
+  margin-bottom: 4px;
+}
+
+label.required::after {
+  content: "*";
+  color: #f0503a;
+  display: inline-block;
+  transform: translate(3px, -3px);
+
+}
+
+/* .header::after{
+  content:"";
+  display: block;
+  background-color: #F45D48;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  height: 460px;
+
+} */
+
+
+
+.bred {
+  border: 1px solid red;
+}
+
+.bgreen {
+  border: 1px solid green;
+}
+
+.bblue {
+  border: 1px solid blue;
+}
+
+.bpurple {
+  border: 1px solid purple;
+}
+
+.borange {
+  border: 1px solid orange;
+}
+
+
+
+
+/* width */
+::-webkit-scrollbar,
+::-webkit-scrollbar:horizontal {
+  height: 4px;
+  /* height of horizontal scrollbar  */
+  width: 4px;
+  /* width of vertical scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track,
+::-webkit-scrollbar:horizontal {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.272);
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.141);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar:horizontal {
+  background: #f0503a;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+.tab-content,
+.tab-pane {
+  height: 100%;
+  background-color: transparent;
+}
+
+.tab-content>.tab-pane {
+  display: none;
+}
+
+.tab-content>.active {
+  display: block;
+}
+
+.primaryBtn {
+  margin: 20px 10px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 13px 25px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: none;
+  color: white;
+  background: #185adb;
+  transition: all 0.25s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -10px rgba(24, 90, 219, 0.6);
+}
+
+/* AG GRID CHANGES */
+.ag-header-cell,
+.ag-header-group-cell {
+  margin-left: 23px !important;
+}
