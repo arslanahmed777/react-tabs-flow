@@ -6,6 +6,8 @@ import MainTabsObj from "./MainTabsObj"
 import { activeSubTab, mainTabsSelector } from '../../Redux/TabsSlice/TabsSlice';
 const Dashboard = lazy(() => import(   /* webpackChunkName: "Dashboard" */ "../../MainTabs/Dashboard/Dashboard"));
 const Billing = lazy(() => import(/* webpackChunkName: "Billing" */ "../../MainTabs/Billing/Billing"));
+const Scheduler = lazy(() => import(/* webpackChunkName: "Scheduler" */ "../../MainTabs/Scheduler/Scheduler"));
+
 
 const HomePage = () => {
     const MainTabItems = MainTabsObj()
@@ -17,6 +19,7 @@ const HomePage = () => {
     const [tabsmodal, settabsmodal] = useState({
         dashboard: true,
         billing: false,
+        scheduler: false
     });
     const handleMenuItemClick = (key, name) => {
         dispatch(activeSubTab({ tabName: "mainTabs", key, name }))
@@ -43,6 +46,7 @@ const HomePage = () => {
                     <Suspense fallback={<div>Loading...</div>}>
                         {tabsmodal.dashboard === true && <TabPane id={1} tabId={1}><Dashboard /></TabPane>}
                         {tabsmodal.billing === true && <TabPane id={2} tabId={2}><Billing /></TabPane>}
+                        {tabsmodal.scheduler === true && <TabPane id={3} tabId={3}><Scheduler /></TabPane>}
                     </Suspense>
                 </TabContent>}
             </div>

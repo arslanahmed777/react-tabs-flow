@@ -19,6 +19,13 @@ const MainTabsObj = () => {
       right: true,
       active: false
     },
+    {
+      key: 3,
+      title: "Scheduler",
+      name: "scheduler",
+      right: true,
+      active: false
+    },
 
   ];
 };
